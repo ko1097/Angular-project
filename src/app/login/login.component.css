@@ -1,0 +1,8 @@
+.body1{
+    background-image: url("../../assets/images/logIn.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    padding: 30px;
+    
+}

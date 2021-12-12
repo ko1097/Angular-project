@@ -1,0 +1,75 @@
+<body class="body">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <img src="../../assets/images/signup2.jpg" class="img-fluid" alt="not found">
+      </div>
+      <div class="col-lg-5 formss">
+        <h2 class="heading2" >To Listen Latest Music <br> Join Us </h2>
+        <form #registrationForm ='ngForm' autocomplete="off">
+          
+          <div class="form-group col-md-10 p-2 ms-4">
+            <input  name="FirstName" type="text"   #FirstName = "ngModel" [(ngModel)]="user.FirstName" class="form-control"id="FirstName" placeholder="First-Name" required minlength="4">   
+            <div *ngIf="FirstName.invalid && (FirstName.dirty || FirstName.touched)"
+             class="alert text-end">
+        
+            <div *ngIf="FirstName.errors?.['required']">
+             First-Name is required.
+           </div>
+           <div *ngIf="FirstName.errors?.['minlength']">
+             First-Name must be at least 4 characters long.
+             </div>
+          </div>
+          </div>
+          <div class="col-md-10 p-2 ms-4">
+            <input name="Lastname" type="text"   #LastName = "ngModel" [(ngModel)]="user.LastName" class="form-control validate" placeholder="Last-Name" required minlength="2">
+          <div *ngIf="LastName.invalid && (LastName.dirty || LastName.touched)"
+            class="alert">
+       
+           <div *ngIf="LastName.errors?.['required']">
+            Last-Name is required.
+           </div>
+            <div *ngIf="LastName.errors?.['minlength']">
+            Last-Name must be at least 2 characters long.
+            </div>
+         </div>
+          </div>
+          <div class="col-md-10 p-2 ms-4">
+            <input name="Email" type="email"   #Email = "ngModel" [(ngModel)]="user.Email" class="form-control validate" placeholder="Email" required>
+            <div *ngIf="Email.invalid && (Email.dirty || Email.touched)"
+            class="alert">
+       
+           <div *ngIf="Email.errors?.['required']">
+            Email ID Required
+           </div>
+            
+         </div>
+          </div>
+          <div class="col-md-10 p-2 ms-4">
+            <input name="Password" type="password"   #Password = "ngModel" [(ngModel)]="user.Password" placeholder="Password" class="form-control"required minlength="8">
+            <div *ngIf="Password.invalid && (Password.dirty || Password.touched)"
+            class="alert">
+       
+           <div *ngIf="Password.errors?.['minlength']">
+            Password must be at least 8 characters long.
+            </div>
+           </div>
+          </div>
+            
+                
+          
+          
+          <div class=" col-4 mx-auto">
+            <button type="submit"  [disabled]="!registrationForm.valid" class="btn btn-primary mg-tp"> <a routerLink="/login" routerLinkActive="active" class="color"> Sign Up </a>  </button>              
+          </div>
+          
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+
+<router-outlet></router-outlet>

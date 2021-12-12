@@ -1,0 +1,47 @@
+.home{
+    display: grid;
+    grid-template-columns:[left-start] 400px [left-end right-start ] 1fr [right-end];
+    background-color: whitesmoke;
+    
+}
+.left{
+    grid-column: left-start/left-end;
+   
+}
+.left-img{
+    width: 400px;
+    height: 95%;
+    margin-top: 40px;
+    margin-left: -19px;
+    border-radius: 10px;
+}
+.right{
+    grid-column: right-start/right-end;
+}
+.right-heading{
+    font-size: 45px;
+    margin-top: 18%;
+    margin-left: 10%;
+}
+.right-para{
+    font-size: 14px;
+    margin-left: 10%;
+    text-transform: capitalize;
+    margin-left: 10%;
+}
+.right-btn{
+    border: 2px solid blue;
+    height: 45px;
+    width: 110px;
+    border-radius: 25px;
+    background-color: blue;
+    text-align: center;
+    margin-left: 20%;
+
+}
+.right-a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+
+}
